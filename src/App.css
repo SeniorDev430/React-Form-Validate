@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
+  height: 36px;
+  margin-top: 50px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #394956;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sign-up {
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #D6DDE3;
+  box-shadow: 0 0 8px 0 rgb(165 178 189 / 23%);
+  margin-top: 40px;
+  max-width: 850px;
+  min-height: 445px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+.sign-up_form {
+  width: 65%;
+}
+
+.sign-up_header {
+  text-align: left;
+  padding: 40px 10px 10px 40px;
+}
+
+.sign-up_header h1, .sign-up_header h2, .sign-up_header h3 {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -.41px;
+  margin-bottom: 8px;
+}
+
+.sign-up_header h1 {
+  margin-top: 0;
+  color: #394956;
+}
+
+.sign-up_sidebar {
+  background: #F9FAFA;
+  border-left: 1px solid #D6DDE3;
+  display: block;
+  float: right;
+  min-height: 200px;
+  position: relative;
+  text-align: left;
+  width: 34%;
+  z-index: 2;
+}
+
+.sign-up_sidebar-bg {
+  background: #F9FAFA;
+  border-left: 1px solid #D6DDE3;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 34%;
+  z-index: 1;
+}
+
+.sign-up_plan {
+  padding: 40px 40px 0;
+}
+
+.sign-up_plan--standard {
+  color: #3197D6;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.sign-up_plan ul {
+  margin: 20px 0 0 20px;
+}
+
+.sign-up_sidebar li {
+  color: #4F5D68;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.sign-up_sidebar .all-features {
+  display: none;
+}
+
+.sign-up_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up_brands {
+  padding: 20px 0 20px;
+  text-align: center;
+}
+
+.sign-up_brands-list {
+  list-style-type: none;
+  padding: 15px 30px;
+  margin: 0;
+}
+
+.sign-up_brands-list li {
+  padding: 6px 0;
+  display: inline-block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 49%;
+}
+
+.sign-up_brands h4 {
+  color: #4F5D68;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.sign-up_brands-list img {
+  width: 90%;
+}
+
+.sign-up_deets {
+  padding: 0 40px 30px;
+}
+
+.u-pad-b-0 {
+  padding-bottom: 0!important;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  max-width: 900px;
+  padding: 0;
+}
+
+.sign-up .control-group {
+  margin-bottom: 20px;
+}
+
+.name {
+  display: flex;
+  width: 100%;
+}
+
+.firstname {
+  width: 50%;;
+}
+.lastname {
+  margin-left: 10px;
+  width: 50%;
+}
+
+.sign-up input {
+  border: 0.5px solid #B4C0CA;
+  box-sizing: border-box;
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px 15px;
+  width: 98%;
+  border-radius: 3px;
+}
+
+input:focus {
+  outline: none !important;
+  border:1px solid lightskyblue;
+}
+
+.flex{
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.error {
+  border-color: red !important;
+}
+
+.ok {
+  border-color: green !important;
+}
+
+.danger {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.mark {
+  margin-top: 10px;
+  margin-left: -25px;
+}
+
+.u-pad-t-2 {
+  padding-top: 8px!important;
+}
+
+#signupForm #agree {
+  color: #a5b2bd;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.sign-up .btn-success {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.list-div {
+  display: flex;
+  width: 100%;
+}
+
+#password_valid {
+  display: none;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
 }
