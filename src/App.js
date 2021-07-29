@@ -1,3 +1,11 @@
+// ==UserScript== 
+// @name Test
+// @version 0.1 
+// @description Sign up page test
+// @author Alex Lim 
+// ==/UserScript== 
+
+
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
